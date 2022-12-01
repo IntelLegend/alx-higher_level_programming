@@ -1,3 +1,3 @@
 
 #!/usr/bin/python3
-import seriously
+open(1, 'w').write("#pythoniscool\n")

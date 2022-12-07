@@ -1,12 +1,13 @@
 #!/usr/bin/python3
+
+
 def complex_delete(a_dictionary, value):
-    d_keys = []
-    for keys, values in a_dictionary.items():
-        if values == value:
-            d_keys.append(keys)
-    for key in d_keys:
-        del a_dictionary[key]
+    new_dict = dict(a_dictionary)
+    for k, v in new_dict.items():
+        if v == value:
+            a_dictionary.pop(k)
     return a_dictionary
+
 
 if __name__ == '__main__':
     print_sorted_dictionary = \

@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-def by_2(tup):
-    return tup[0], tup[1] * 2
 
 
 def multiply_by_2(a_dictionary):
-    tlist = list(map(by_2, [(x, y) for (x, y) in a_dictionary.items()]))
-    return dict(tlist)
+    if a_dictionary is not None:
+        new_dict = dict(a_dictionary)
+        for k, v in new_dict.items():
+            new_dict[k] = v * 2
+
+        return new_dict
 
 
 if __name__ == '__main__':

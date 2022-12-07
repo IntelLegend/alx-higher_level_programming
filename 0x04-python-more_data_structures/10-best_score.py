@@ -1,11 +1,16 @@
 #!/usr/bin/python3
+
+
 def best_score(a_dictionary):
-    if a_dictionary is None or len(a_dictionary) == 0:
-        return None
-    vals = [tuple(reversed((a, b))) for (a, b) in a_dictionary.items()]
-    vals.sort()
-    vals.reverse()
-    return vals[0][1]
+    if a_dictionary is not None:
+        score = None
+        person = None
+        for k in a_dictionary.keys():
+            if score is None or a_dictionary[k] > score:
+                score = a_dictionary[k]
+                person = k
+        return person
+
 
 if __name__ == '__main__':
     best_score = __import__('10-best_score').best_score
